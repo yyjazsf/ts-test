@@ -24,4 +24,19 @@ describe('stack calc expression', () => {
       BaseCalc('100/0')
     }).toThrow('被除数不能为0！')
   })
+  // it('division 100/(1-1)= error', () => {
+  //   expect(()=>{
+  //     BaseCalc('100/(1-1))')
+  //   }).toThrow('被除数不能为0！')
+  // })
+  it('division 2*3-1+4/2', () => {
+    expect(BaseCalc('2*3-1+4/2')).toBe(7)
+  })
+  it('division 2+3*2*3-2', () => {
+    expect(BaseCalc('2+3*2*3-2')).toBe(18)
+  })
+  it('division 2+3*2*3/2', () => {
+    expect(BaseCalc('2+3*2*3/2')).toBe(11)
+  })
 })
+

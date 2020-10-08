@@ -1,3 +1,3 @@
-require('ts-node-dev').register();
+require('ts-node').register();
 
 require('./stack');
